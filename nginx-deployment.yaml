@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginxkh
+  name: nginxkh2
   labels:
-    app: nginx-test
+    app: nginx-test2
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nginx-test
+      app: nginx-test2
   template:
     metadata:
       labels:
-        app: nginx-test
+        app: nginx-test2
     spec:
       containers:
       - name: nginx
@@ -27,7 +27,7 @@ metadata:
   name: nginx-test-service
 spec:
   selector:
-    app: nginx-test
+    app: nginx-test2
   ports:
     - protocol: TCP
       port: 80
